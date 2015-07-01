@@ -5,3 +5,7 @@
 /build
 /captures
 cnblogs_android.iml
+gradle/gradle.iml
+local.properties
+app/app.iml
+app/local.properties
