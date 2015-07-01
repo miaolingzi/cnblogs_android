@@ -1,4 +1,4 @@
-package com.smart.android.cnblogs;
+package com.smart.android.cnblogs.activity;
 
 import android.os.Build;
 import android.os.Bundle;
@@ -12,6 +12,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.WindowManager;
+
+import com.smart.android.cnblogs.R;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
