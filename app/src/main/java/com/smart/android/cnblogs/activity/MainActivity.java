@@ -19,7 +19,9 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.smart.android.cnblogs.R;
@@ -36,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Bind(R.id.toolbar)
     Toolbar mToolBar;
+    @Bind(R.id.ivLogo)
+    ImageView mImageLogo;
     @Bind(R.id.main_nav_view)
     NavigationView mNavigationView;
     @Bind(R.id.main_drawerLayout)
@@ -55,11 +59,13 @@ public class MainActivity extends AppCompatActivity {
         }
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+        mImageLogo.setVisibility(View.GONE);
         if (mToolBar != null) {
             setSupportActionBar(mToolBar);
             ActionBar actionBar = getSupportActionBar();
             actionBar.setHomeAsUpIndicator(R.drawable.ic_menu);
             actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setDisplayShowTitleEnabled(true);
             mActionBarDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, mToolBar, R.string.open, R.string.close);
             mActionBarDrawerToggle.syncState();
             mDrawerLayout.setDrawerListener(mActionBarDrawerToggle);
@@ -72,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
         transaction.commit();
     }
 
-    private void setupDrawerContent(NavigationView navigationView) {
+    private void setupDrawerContent(final NavigationView navigationView) {
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem menuItem) {
@@ -93,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
                         openActivity(SettingsActivity.class, null);
                         break;
                 }
-                menuItem.setChecked(true);
+                menuItem.setChecked(false);
                 mDrawerLayout.closeDrawers();
                 return true;
             }
@@ -124,5 +130,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         }, 300);
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (mDrawerLayout.isDrawerOpen(GravityCompat.START)){
+            mDrawerLayout.closeDrawers();
+        }else{
+            super.onBackPressed();
+        }
     }
 }

@@ -2,5 +2,6 @@
 <resources>
     <color name="colorPrimary">#ffcccccc</color>
     <color name="tabBackground">#ff39b5eb</color>
-
+    <color name="nav_menu_pressed">#ffcccccc</color>
+    <color name="nav_menu_normal">#00ffffff</color>
 </resources>
