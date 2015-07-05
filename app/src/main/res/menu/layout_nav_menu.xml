@@ -5,28 +5,29 @@
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_menu"
-            android:title="首页"/>
+            android:checked="true"
+            android:title="园子"/>
         <item
-            android:id="@+id/nav_messages"
+            android:id="@+id/nav_topic"
             android:icon="@drawable/ic_menu"
-            android:title="信息"/>
+            android:title="专题"/>
         <item
-            android:id="@+id/nav_friends"
+            android:id="@+id/nav_collection"
             android:icon="@drawable/ic_menu"
-            android:title="朋友"/>
+            android:title="收藏"/>
         <item
-            android:id="@+id/nav_discussion"
+            android:id="@+id/nav_settings"
             android:icon="@drawable/ic_menu"
-            android:title="讨论"/>
+            android:title="设置"/>
     </group>
-    <item android:title="子菜单">
-        <menu>
-            <item
-                android:icon="@drawable/ic_menu"
-                android:title="子菜单1"/>
-            <item
-                android:icon="@drawable/ic_menu"
-                android:title="子菜单2"/>
-        </menu>
-    </item>
+    <!--<item android:title="子菜单">-->
+        <!--<menu>-->
+            <!--<item-->
+                <!--android:icon="@drawable/ic_menu"-->
+                <!--android:title="子菜单1"/>-->
+            <!--<item-->
+                <!--android:icon="@drawable/ic_menu"-->
+                <!--android:title="子菜单2"/>-->
+        <!--</menu>-->
+    <!--</item>-->
 </menu>
