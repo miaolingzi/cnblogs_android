@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="left"
-        android:background="#a5a6dc"
+        android:background="@color/default_bg"
         app:headerLayout="@layout/layout_nav_header"
         app:menu="@menu/layout_nav_menu" />
 </LinearLayout>

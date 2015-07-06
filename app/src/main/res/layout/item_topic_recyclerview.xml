@@ -10,7 +10,7 @@
         android:id="@+id/text_title_item_topic"
         android:text="标题"
         android:textSize="15sp"
-        android:textColor="#fff"
+        android:textColor="#000"
         android:paddingLeft="10dp"
         android:layout_width="0dp"
         android:layout_weight="1"

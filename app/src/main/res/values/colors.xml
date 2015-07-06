@@ -4,4 +4,10 @@
     <color name="tabBackground">#ff39b5eb</color>
     <color name="nav_menu_pressed">#ffcccccc</color>
     <color name="nav_menu_normal">#00ffffff</color>
+
+    <color name="default_bg">#ffffffff</color>
+
+    <color name="main">#ff4387f0</color>
+    <color name="main_tab_bg">#63C3FF</color>
+    <color name="lite_text_color">#ffa3a3a3</color>
 </resources>

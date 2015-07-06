@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ff39b5eb"
+    android:background="@color/main"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
     tools:context=".MainActivity">
@@ -19,6 +19,7 @@
             android:id="@+id/main_linear_container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@color/default_bg"
             android:orientation="vertical">
             <!--顶部ToolBar-->
             <!--<include layout="@layout/layout_top" />-->
