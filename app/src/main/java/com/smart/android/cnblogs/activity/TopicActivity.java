@@ -52,7 +52,7 @@ public class TopicActivity extends AppCompatActivity {
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(layoutManager);
         String[] title = getResources().getStringArray(R.array.main_title);
-        String[] topic = new String[title.length - 2];
+        final String[] topic = new String[title.length - 2];
         for (int i = 0; i < title.length - 2; i++) {
             topic[i] = title[i + 2];
         }
@@ -63,6 +63,10 @@ public class TopicActivity extends AppCompatActivity {
             public void onItemClick(View view, int position) {
                 Toast.makeText(TopicActivity.this,"click: "+position,Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(TopicActivity.this, TopicDetailActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putInt("position",position);
+                bundle.putStringArray("topic",topic);
+                intent.putExtras(bundle);
                 startActivity(intent);
             }
 
