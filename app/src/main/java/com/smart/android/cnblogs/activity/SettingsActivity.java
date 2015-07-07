@@ -1,5 +1,7 @@
 package com.smart.android.cnblogs.activity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
@@ -9,11 +11,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.smart.android.cnblogs.R;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * Created by feng on 2015/7/5.
@@ -24,6 +28,16 @@ public class SettingsActivity extends AppCompatActivity {
     Toolbar mToolBar;
     @Bind(R.id.ivLogo)
     ImageView mImageLogo;
+    @Bind(R.id.text_market_comment)
+    TextView mMarketComment;
+
+    @OnClick(R.id.text_market_comment) public void toMarketComment(View view){
+//        String mAddress = "market://details?id=" + getPackageName();
+        String mAddress = "market://details?id=com.smart.questionbank";
+        Intent marketIntent = new Intent("android.intent.action.VIEW");
+        marketIntent .setData(Uri.parse(mAddress));
+        startActivity(marketIntent );
+    }
 
 
     @Override
